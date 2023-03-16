@@ -88,13 +88,18 @@ Le modèle 3D et les plans du bras ARM-21N2 sont accessibles en cliquant sur l'i
 La carte SD et l'image du Rpi
 -----------------------------
 
-Pour utiliser le robot, il sera nécessaire de copier l'image du RPI sur la carte SD ou de créer sa propre carte SD en suivant ce :doc:`./tuto`.
+Pour utiliser le robot, il sera nécessaire de copier l'image du RPI sur la carte SD ou de créer sa propre carte SD en suivant ce 
+
+.. toctree::
+    :maxdepth: 1
+
+    ./tuto.rst
 
 Le raspberry pi est configuré au niveau wifi et le package python est déjà dans l'image.
 
 Utilsez une carte micro SD de 16Go montée dans un adaptateur SD
 
-1- `Téléchargez l'image <http://sourceforge.net/projects/win32diskimager/files/latest/download>`_
+1- Télécharger l'image sur le site Eduscol
 
 2- Copier l'image sur la carte SD :
 

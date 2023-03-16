@@ -170,6 +170,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="essentiel.html">L’essentiel pour commencer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tutoriel</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Tutoriel</a></li>
 </ul>
 </li>
@@ -225,47 +226,67 @@
         <article role="main">
           <section id="tutoriel">
 <h1>Tutoriel<a class="headerlink" href="#tutoriel" title="Permalink to this heading">#</a></h1>
-<p>Copyright (C) 2023 Stéphane Duchemin &amp; Quentin Duchemin
+<p>Copyright (C) 2023 Stéphane Duchemin
 # Licensed under the Creative Commons Attribution-ShareAlike License 4.0 (International) (CC-BY-SA 4.0) -<a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
 <p>Les étapes de création de la carte SD</p>
-<p><strong>1 - Télécharger l’image de raspbian sur https://www.raspberrypi.com/software/</strong></p>
-<p>Utiliser imager version Raspbian 64bits lite</p>
-<p><a class="reference external" href="https://downloads.raspberrypi.org/imager/imager_latest.exe">https://downloads.raspberrypi.org/imager/imager_latest.exe</a></p>
-<p>préconfigurer ssh locales nom utilisateur et mdp (pi/pi)</p>
-<p><strong>2 - Décompacter et copier l’image sur carte SD 16Go</strong></p>
-<p>Utiliser Win 32 Diskimager</p>
-<p><strong>3 - Monter la carte SD sur le RPI</strong></p>
-<p>récupérer l’adresse ip du RPI grace à l’outil “Advanced_IP_Scanner”</p>
-<p><strong>4 - Se connecter en ssh sur le RPI sur la même plage réseau en 192.168.1…..</strong></p>
-<p>ouvrir une fenêtre bash (gitbash) taper ssh <a class="reference external" href="mailto:pi&#37;&#52;&#48;192&#46;168&#46;1">pi<span>&#64;</span>192<span>&#46;</span>168<span>&#46;</span>1</a>…</p>
-<p>saisir le mdp du compte pi</p>
-<p><strong>5 - Installer le point d’accès RASPAP</strong></p>
-<p>sur le github RASAP suivre la procédure d’installation</p>
+<p><strong>1 - Télécharger et installer l’image de raspbian à partir de :</strong></p>
 <p><a class="reference external" href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a></p>
-<p><a class="reference external" href="https://downloads.raspberrypi.org/imager/imager_latest.exe">https://downloads.raspberrypi.org/imager/imager_latest.exe</a></p>
+<p>Choisir “imager” version Raspbian 64bits lite dans Raspberry pi OS (other)</p>
+<p>Pour le stockage –&gt; Choisir votre carte SD (ATTENTION à bien sélectionner votre carte SD !)</p>
+<p>Cliquer sur la roue crantée</p>
+<blockquote>
+<div><p>Activer SSH</p>
+<p>Nom utilisateur : pi</p>
+<p>Mot de passe: pi</p>
+<p>Configurer le WIFI</p>
+<blockquote>
+<div><p>Saisir le SSID</p>
+<p>Saisir le mot de passe</p>
+</div></blockquote>
+<p>Pays WIFI : fr</p>
+<p>Définir les réglages locaux</p>
+<blockquote>
+<div><p>Fuseau horaire : EUROPE:PARIS</p>
+<p>Type de clavier : fr</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>2 - Monter la carte SD sur le RPI</strong></p>
+<p>récupérer l’adresse ip du RPI grace à l’outil “Advanced_IP_Scanner”</p>
+<p><strong>3 - Se connecter en ssh sur le RPI sur la même plage réseau en 192.168.1…..</strong></p>
+<p>ouvrir une fenêtre bash et taper ssh <a class="reference external" href="mailto:pi&#37;&#52;&#48;192&#46;168&#46;1">pi<span>&#64;</span>192<span>&#46;</span>168<span>&#46;</span>1</a>…</p>
+<p>saisir le mdp du compte pi</p>
+<p><strong>4 - Installer le point d’accès RASPAP</strong></p>
+<p>sur le github RASAP suivre la procédure d’installation</p>
+<p><a class="reference external" href="https://github.com/RaspAP/raspap-webgui">https://github.com/RaspAP/raspap-webgui</a></p>
 <p>accès interface raspap :</p>
 <p>10.3.141.1</p>
-<p>username : admin</p>
+<blockquote>
+<div><p>username : admin</p>
 <p>pwd : secret</p>
+</div></blockquote>
 <p>WIFI :</p>
-<p>SSID  : raspi-webgui</p>
+<blockquote>
+<div><p>SSID  : raspi-webgui</p>
 <p>Password : ChangeMe</p>
+</div></blockquote>
 <p>reboot</p>
+<p><strong>5 - Copier le projet bras-ljv dans le /home/pi/bras</strong></p>
+<p><a class="reference external" href="https://github.com/mystique014/bras_ljv">https://github.com/mystique014/bras_ljv</a></p>
 <p><strong>6 - Installer les paquets python en ligne de commande</strong></p>
 <p>ATTENTION SE CONNECTER en SSH puis sudo su (faire les install de paquet en super user)</p>
-<p>Pip3 install dash, scipy, pulp, etc….</p>
-<p>Penser à installer le paquet pour le module PCA9685 (adafruit….)</p>
-<p><strong>7 - Copier le projet bras-ljv dans le /home/pi/bras</strong></p>
-<p><strong>8 - Créer un fichier bash lance.sh contenant</strong></p>
+<p>sudo pip3 install dash, scipy, pulp, etc….</p>
+<p>Penser à installer le paquet pour le module PCA9685 adafruit</p>
+<p>sudo pip3 install adafruit-circuitpython-pca9685</p>
+<p><strong>7 - Créer un fichier bash lance.sh contenant</strong></p>
 <p>cd /home/pi/bras</p>
 <p>python3 app.py</p>
-<p><strong>9 - Créer une tache cron pour lancer le fichier lance.sh au reboot du RPI</strong></p>
+<p><strong>8 - Créer une tache cron pour lancer le fichier lance.sh au reboot du RPI</strong></p>
 <p>créer un dossier logs dans /home/pi</p>
 <p>en sudo su</p>
 <p>crontab -e et ajouter à la fin du fichier</p>
 <p>&#64;reboot sh /home/pi/lance.sh &gt; /home/pi/logs/log.txt 2&gt;&amp;1</p>
 <p>reboot</p>
-<p>That all !</p>
+<p>That’s all !</p>
 </section>
 
         </article>
